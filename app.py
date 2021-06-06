@@ -40,9 +40,9 @@ def make_prediction():
         prediction = classifier.predict(checkprediction)
 
         if prediction[0]==1 :
-            label = 'website is not legitimate'
+            label = 'Website is phished'
         elif prediction[0]==-1:
-            label ='website is legitimate'
+            label ='Website is not phished'
         
         return render_template('home.html', label=label)
         
